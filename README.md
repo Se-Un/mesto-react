@@ -19,9 +19,12 @@
 * [ссылка на проект](https://se-un.github.io/mesto/)
 
 **Технологии**
-  1. React
-  2.JSX
-  2.React-hooks(useState, useEffect)
+  1. HTML
+  2. CSS
+  3. Javascript
+  4. Webpack
+  5. React
+
 
 
   **Описание**
