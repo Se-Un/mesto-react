@@ -6,7 +6,7 @@ class Api {
     this._headers = options.headers;
   }
   // создать метод для возвращения json
-  #response(res) {
+  #getResponseData(res) {
     if(res.ok) {
       return res.json();
     }
@@ -19,7 +19,7 @@ class Api {
       method: 'GET',
       headers: this._headers
     })
-    .then(this.#response);
+    .then(this.#getResponseData);
   }
   // метод добавления первоначальных карточек
   getInitialCards() {
@@ -27,7 +27,7 @@ class Api {
       method: 'GET',
       headers: this._headers
     })
-    .then(this.#response);
+    .then(this.#getResponseData);
   }
   // метод добавления информации о пользователе на сервер
   patchDataUser(data) {
@@ -38,7 +38,7 @@ class Api {
         name: data.name,
         about: data.about,
       }),
-    }).then(this.#response);
+    }).then(this.#getResponseData);
   }
   // создать метод создания карты на сервере
   postDataCards(data) {
@@ -46,28 +46,28 @@ class Api {
       method: 'POST',
       headers: this._headers,
       body: JSON.stringify(data),
-    }).then(this.#response);
+    }).then(this.#getResponseData);
   }
   // создать метод удаления карты на сервере
   deleteCard(id) {
     return fetch(`${this._baseUrl}/cards/${id}`, {
         method: "DELETE",
         headers: this._headers,
-    }).then(this.#response);
+    }).then(this.#getResponseData);
   }
   // создать метод лайка карточки
   likeState(id) {
     return fetch(`${this._baseUrl}/cards/${id}/likes`, {
         method: "PUT",
         headers: this._headers,
-    }).then(this.#response);
+    }).then(this.#getResponseData);
   }
   // создать метод дизлайка карточки
   dislikeState(id) {
     return fetch(`${this._baseUrl}/cards/${id}/likes`, {
         method: "DELETE",
         headers: this._headers,
-    }).then(this.#response);
+    }).then(this.#getResponseData);
   }
   // создать метод изменения аватара
   changeAvatar(data) {
@@ -75,7 +75,7 @@ class Api {
         method: "PATCH",
         headers: this._headers,
         body: JSON.stringify(data),
-    }).then(this._response);
+    }).then(this.#getResponseData);
   }
 }
 

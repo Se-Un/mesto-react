@@ -48,7 +48,12 @@ function App() {
 
       <Footer text="&#169; 2020 Mesto Russia" />
       
-      <PopupWithForm name="profile" title="Редактировать профиль" buttonSubmitText="Сохранить" isOpen={isEditProfilePopupOpen} onClose={closeAllPopups}>
+      <PopupWithForm 
+      name="profile" 
+      title="Редактировать профиль" 
+      buttonSubmitText="Сохранить" 
+      isOpen={isEditProfilePopupOpen} 
+      onClose={closeAllPopups}>
           
           <input 
           className="popup__input" 
@@ -75,7 +80,12 @@ function App() {
 
       </PopupWithForm>
       
-      <PopupWithForm name="element" title="Новое место" buttonSubmitText="Сохранить" isOpen={isAddPlacePopupOpen} onClose={closeAllPopups}>
+      <PopupWithForm 
+      name="element" 
+      title="Новое место" 
+      buttonSubmitText="Сохранить" 
+      isOpen={isAddPlacePopupOpen} 
+      onClose={closeAllPopups}>
           
           <input 
           className="popup__input" 
@@ -100,7 +110,12 @@ function App() {
           
       </PopupWithForm>
 
-      <PopupWithForm name="changeAvatar" title="Обновить аватар" buttonSubmitText="Сохранить" isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups}>
+      <PopupWithForm 
+      name="changeAvatar" 
+      title="Обновить аватар" 
+      buttonSubmitText="Сохранить" 
+      isOpen={isEditAvatarPopupOpen} 
+      onClose={closeAllPopups}>
           
           <input 
           className="popup__input popup__input_avatar_margin" 
@@ -114,9 +129,15 @@ function App() {
 
       </PopupWithForm>
 
-      <PopupWithForm name="deleteCard" title="Вы уверены?" buttonSubmitText="Да" />
+      <PopupWithForm 
+      name="deleteCard" 
+      title="Вы уверены?" 
+      buttonSubmitText="Да" />
 
-      <ImagePopup name="scale-picture" card={selectedCard} onClose={closeAllPopups} />
+      <ImagePopup 
+      name="scale-picture" 
+      card={selectedCard} 
+      onClose={closeAllPopups} />
     </div>
   );
 }

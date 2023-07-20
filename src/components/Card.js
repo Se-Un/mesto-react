@@ -1,18 +1,17 @@
 import React from 'react';
 
-function Cards(props) {
+function Card(props) {
 
   function handleClick() {
     props.onCardClick(props);
   }  
 
   return(
-  <>
     <article className="element">
       
       <button className="element__delete" name="delete-btn" type="button" aria-label="Удалить"></button>
       
-        <img className="element__image" src={props.link} alt="Фотокарточка" onClick={handleClick} />
+        <img className="element__image" src={props.link} alt={props.title} onClick={handleClick} />
         
         <div className="element__content">
           
@@ -25,9 +24,7 @@ function Cards(props) {
         </div>
     
     </article>
-    
-  </>
   )
 }
 
-export default Cards;
+export default Card;

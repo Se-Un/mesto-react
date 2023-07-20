@@ -1,14 +1,14 @@
 import React from 'react';
-import Cards from './Cards';
+import Card from './Card';
 import api from '../utils/api';
 
 
 
 function Main(props) {
 
-  const [userName, setUserName] = React.useState([]);
-  const [userDescription, setUserDescription] = React.useState([]);
-  const [userAvatar, setUserAvatar] = React.useState([]);
+  const [userName, setUserName] = React.useState("");
+  const [userDescription, setUserDescription] = React.useState("");
+  const [userAvatar, setUserAvatar] = React.useState("");
   const [cards, setCards] = React.useState([]);
 
   React.useEffect(() => {
@@ -56,7 +56,7 @@ function Main(props) {
         <section className="elements">
 
           {cards.map((card) => (
-            <Cards
+            <Card
             key={card._id} 
             title={card.name}
             link={card.link}
