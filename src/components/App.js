@@ -40,10 +40,10 @@ function App() {
       <Header src={logo} alt="логотип отошёл на 5 минут" />
       
       <Main 
-      onEditProfile={handleEditProfileClick}
-      onAddPlace={handleAddPlaceClick}
-      onEditAvatar={handleEditAvatarClick}
-      onPictureClick={handleCardClick}
+       onEditProfile={handleEditProfileClick}
+       onAddPlace={handleAddPlaceClick}
+       onEditAvatar={handleEditAvatarClick}
+       onPictureClick={handleCardClick}
        />
 
       <Footer text="&#169; 2020 Mesto Russia" />

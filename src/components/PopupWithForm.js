@@ -10,7 +10,7 @@ function PopupWithForm(props) {
 
         <button className="popup__button-close" name="button-close" type="button" onClick={props.onClose} aria-label="Закрыть"></button>
 
-        <form className="popup__form" name={`${props.name}-profile`}>
+        <form className="popup__form" name={`${props.name}-form`}>
 
           <h2 className="popup__title">{props.title}</h2>
 
